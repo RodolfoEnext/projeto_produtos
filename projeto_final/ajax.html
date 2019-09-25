@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>teste ajax</title>
+</head>
+
+<body>
+
+    <div id="demo"></div>
+
+    <script>
+        var produtos;
+
+        function lerApi() {
+            var destino = "https://cdn.rawgit.com/LucasRuy/1d4a5d45e2ea204d712d0b324af28bab/raw/342e0e9277be486102543c7f50ef5fcf193234b6/potions.json";
+            var xhttp = new XMLHttpRequest();
+            var msg = '';
+            var demo = document.querySelector('#demo');
+
+            xhttp.onreadystatechange = function() {
+                var produtos;
+                if (this.readyState == 4 && this.status == 200) {
+                    produtos = JSON.parse(this.responseText);
+                    console.log(produtos)
+                        // produtos = document.getElementById("demo").innerHTML = this.responseText;
+                }
+
+                var novo = document.querySelector('.modal-content');
+                var titulo = document.createElement('h1');
+                var texto = document.createTextNode();
+
+                if (produtos.potions[1].name) {
+                    titulo.appendChild(texto);
+                    novo.appendChild(titulo);
+
+                    // msg += `<h3>${produtos.potions[1].name}</h3>`;
+                    // msg += `<h3>Use/Effects</h3>`;
+                    // msg += `<p>${produtos.potions[1].effect}</p>`;
+                    // msg += `<h3>Ingredients:</h3>`;
+                    // msg += `${produtos.potions[1].ingredients[0]}<br>`;
+                    // msg += `${produtos.potions[1].ingredients[1]}<br>`;
+                    // msg += `${produtos.potions[1].ingredients[2]}<br>`;
+                    // msg += `${produtos.potions[1].ingredients[3]}<br>`;
+                    // msg += `${produtos.potions[1].ingredients[4]}<br>`;
+                    // msg += `${produtos.potions[1].ingredients[5]}`;
+
+                    demo.innerHTML = msg;
+                }
+
+                // for (p in produtos) {
+                //     msg += `${produtos[p].nome}`;
+                //     demo.innerHTML = msg;
+                //     console.log("produtos", produtos[p]);
+                //     console.log("p", p);
+                // }
+            };
+            xhttp.open("GET", destino, true);
+            xhttp.send();
+            // return produtos;
+        }
+        lerApi();
+    </script>
+</body>
+
+</html>

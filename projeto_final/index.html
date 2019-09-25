@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Projeto Final</title>
+</head>
+
+<body>
+    <div class="logo1"></div>
+    <div id="interface">
+        <!-- __________________________________________________________________________________________ 
+                                        |            HEADER  |                                               
+        _______________________________________________________________________________________________ 
+         -->
+        <header>
+            <section>
+                <div class="header">
+                    <div class="nav_button" onclick="teste()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="logo">
+
+                        <img src="images/logo.png" alt="Logo 1">
+                    </div>
+                    <div class="search">
+                        <form action="">
+                            <!-- <i class="fa fa-fw fa-search"></i> -->
+                            <?xml version="1.0" encoding="iso-8859-1"?>
+                            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
+                                <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+                                s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+                                c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
+                                s-17-7.626-17-17S14.61,6,23.984,6z"/>
+                            </svg>
+                            <input nome="search" type="search" placeholder="Search our Stock">
+
+                        </form>
+                    </div>
+                    <div class="logo2">
+                        <img src="images/logo2.png" alt="Logo 2">
+                    </div>
+                    <div class="header_logos">
+                        <div class="logo3">
+                            <img src="images/logo3.png" alt="Logo 3">
+                        </div>
+                        <div class="logo4">
+                            <img src="images/logo4.png" alt="Logo 4">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        <!-- __________________________________________________________________________________________ 
+                                        |            NAVEGADOR  |                                               
+        _______________________________________________________________________________________________ 
+            -->
+        <nav>
+            <section>
+                <div class="nav">
+                    <div class="nav_links">
+                        <a>Potions</a><i class="fa fa-caret-down"></i>
+                        <a>Ingredients</a><i class="fa fa-caret-down"></i>
+                        <a>Books</a><i class="fa fa-caret-down"></i>
+                        <a>Supplies</a><i class="fa fa-caret-down"></i>
+                        <a>Charms</a><i class="fa fa-caret-down"></i>
+                        <a>Clearance</a>
+                    </div>
+
+                    <div class="nav_login">
+                        <a>Sign In</a>&nbsp;or
+                        <a>Sign Up</a>
+                    </div>
+
+                </div>
+
+            </section>
+        </nav>
+        <main>
+            <!-- __________________________________________________________________________________________ 
+                                           |            PRODUTOS  |                                               
+            _______________________________________________________________________________________________ 
+                -->
+            <section>
+                <div class="produtos">
+                    <h3>Potion</h3>
+                    <div class="prod" id="aging" onclick="aging()">
+                        <img src="images/products/aging-potion.png" alt="Aging Potions">
+                        <h3>Aging Potion - $29,99</h3>
+                    </div>
+
+                    <div class="prod">
+                        <img src="images/products/bulgeye-potion.png" alt="Bulgeye Potion">
+                        <h4>Bulgeye Potion - $19,99</h4>
+                    </div>
+
+                    <div class="prod">
+                        <img src="images/products/dragon-tonic.png" alt="Dragon Tonic">
+                        <h4>Dragon Tonic - $64,99</h4>
+                    </div>
+
+                    <div class="prod">
+                        <img src="images/products/love-potion.png" alt="Love Potion">
+                        <h4>Love Potion - $29,99</h4>
+                    </div>
+
+                    <div class="prod">
+                        <img src="images/products/polyjuice-potion.png" alt="Polyjuice Potions">
+                        <h4>Polyjuice Potion - $99,99</h4>
+                    </div>
+
+                    <div class="prod">
+                        <img src="images/products/sleeping-draught.png" alt="Sleeping Potions">
+                        <h4>Sleeping Draught Potion - $14,99</h4>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- __________________________________________________________________________________________ 
+                                           |        MODAL|                                               
+            _______________________________________________________________________________________________ 
+                -->
+            <section>
+                <div id="modal_aging" class="modal">
+                    <div class="format_modal">
+                        <div class="modal-content">
+                            <span onclick="span()" class="close">&times;</span>
+                            <div class="imagem_modal">
+
+                                <img src="images/products/aging-potion.png" alt="Aging Potions">
+                            </div>
+                            <div class="info_modal"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div id="bulgeye" class="modal">
+                    <div class="format_modal">
+                        <div class="modal-content">
+                            <span onclick="span()" class="close">&times;</span>
+                            <img src="images/products/bulgeye-potion.png" alt="Bulgeye Potion">
+                            <h4>Bulgeye Potion - $19,99</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- __________________________________________________________________________________________ 
+                                           |        FOOTER                                               
+        _______________________________________________________________________________________________ 
+        -->
+        <footer>
+            <div class="footer">
+                <section>
+                    <div class="footer_dados_1">
+                        <div class="footer_contacts">
+                            <ul>
+                                <li>
+                                    <h3>COMPANY RETURNS</h3>
+                                </li>
+                                <li>
+                                    <h3>CONTACT US CAREERS</h3>
+                                </li>
+                                <li>
+                                    <h3>SHIPPING</h3>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="footer_midia">
+                            <a href="https://www.facebook.com/" target="t_blank">
+                                <img src="images/facebook.png" alt=""></a>
+
+                            <a href="https://www.facebook.com/" target="t_blank">
+                                <img src="images/twitter.png" alt=""></a>
+
+                            <a href="https://www.facebook.com/" target="t_blank">
+                                <img src="images/pinterest.png" alt=""></a>
+
+                            <a href="https://www.facebook.com/" target="t_blank">
+                                <img src="images/tumb.png" alt=""></a>
+
+                            <a href="https://www.facebook.com/" target="t_blank">
+                                <img src="images/google.png" alt=""></a>
+                        </div>
+
+                        <div class="footer_copyright">
+                            <p>&#169;2015 Merlin's Potions. All Rights Reserved</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <div class="footer_dados_2">
+                        <div class="footer_email">
+                            <p>Sing up for our Newsletter</p>
+                            <p>Sing up for our newaletter & get exclusive discounts</p>
+                            <input nome="email" id="email" type="search" placeholder="Enter you email">
+                            <button nome="email">SUBMIT</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </footer>
+    </div>
+    <script>
+        function teste() {
+            alert("Teste")
+        }
+
+        var modal_aging = document.getElementById("modal_aging");
+        var bulgeye = document.getElementById("bulgeye");
+
+        var aging = document.querySelector("#aging");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        aging = () => {
+            modal_aging.style.display = "block";
+        }
+
+        span = () => {
+            modal_aging.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+
+            switch (event) {
+                case modal_aging:
+                    modal_aging.style.display = "none";
+            }
+        }
+
+        /*_____________________________________________________________
+                                        AJAX                         
+        _______________________________________________________________*/
+        var produtos;
+
+        function lerApi() {
+            var destino = "https://cdn.rawgit.com/LucasRuy/1d4a5d45e2ea204d712d0b324af28bab/raw/342e0e9277be486102543c7f50ef5fcf193234b6/potions.json";
+            var xhttp = new XMLHttpRequest();
+            var msg = '';
+            var demo = document.querySelector('#demo');
+
+            xhttp.onreadystatechange = function() {
+                var produtos;
+                if (this.readyState == 4 && this.status == 200) {
+                    produtos = JSON.parse(this.responseText);
+                    console.log(produtos)
+                        // produtos = document.getElementById("demo").innerHTML = this.responseText;
+                }
+
+                var info_modal = document.querySelector('.info_modal');
+
+                if (produtos.potions[1].name) {
+                    msg += `<h3>${produtos.potions[1].name}</h3><br>`;
+                    msg += `<h3>Use/Effects</h3><br>`;
+                    msg += `<p>${produtos.potions[1].effect}</p><br>`;
+                    msg += `<h3>Ingredients:</h3><br>`;
+                    msg += `<p>${produtos.potions[1].ingredients[0]}</p><br>`;
+                    msg += `<p>${produtos.potions[1].ingredients[1]}</p><br>`;
+                    msg += `<p>${produtos.potions[1].ingredients[2]}</p><br>`;
+                    msg += `<p>${produtos.potions[1].ingredients[3]}</p><br>`;
+                    msg += `<p>${produtos.potions[1].ingredients[4]}</p><br>`;
+                    msg += `<p>${produtos.potions[1].ingredients[5]}</p><br>`;
+                    msg += `<h3>Preço</h3><br>`;
+                    msg += `<p>${produtos.potions[1].price}</p>`;
+                    info_modal.innerHTML = msg;
+                }
+            };
+            xhttp.open("GET", destino, true);
+            xhttp.send();
+        }
+        lerApi();
+    </script>
+</body>
+
+</html>

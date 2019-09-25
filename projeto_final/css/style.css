@@ -1,0 +1,366 @@
+/* .logo1 {
+    position: absolute;
+    left: 160px;
+    background: url("../images/potions-layout.png");
+    width: 1024px;
+    height: 1266px;
+    margin: auto;
+    opacity: .1;
+    text-align: center;
+    opacity: 0;
+} */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* __________________________________________________________________________________________ 
+|                                           HEADER  |                                               
+_______________________________________________________________________________________________ 
+*/
+
+header .header {
+    width: 75%;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    vertical-align: center;
+}
+
+#Capa_1 {
+    width: 20px;
+    position: absolute;
+    /* line-height: 2.3; */
+    margin-left: 30px;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+
+/* header .fa-search {
+    position: absolute;
+    line-height: 2.3;
+    margin-left: 2%;
+    color: #d94a26;
+} */
+
+header input[type="search"] {
+    /* position: relative; */
+    border: 1px solid black;
+    margin-left: 20px;
+    margin-right: 140px;
+    width: 80%;
+    border-radius: 5px;
+    padding: 10px;
+    padding-left: 35px;
+}
+
+
+/* __________________________________________________________________________________________ 
+|                                           NAV  |                                               
+_______________________________________________________________________________________________ 
+*/
+
+nav .nav_button span {
+    background: black;
+    border: 2px solid red;
+    margin: 1px;
+}
+
+header .nav_button {
+    width: 10px;
+    height: 10px;
+    transform: rotateZ(90deg)
+}
+
+nav .nav {
+    background: #523468;
+    font-style: italic;
+    color: #fff;
+    width: 75%;
+    margin: auto;
+    padding: 25px;
+    display: flex;
+}
+
+nav .nav_links a {
+    margin-right: 10px;
+}
+
+nav .nav_links a:last-child {
+    padding: 15px;
+    background: #422a53;
+    border-radius: 5px;
+}
+
+nav .nav_login {
+    margin: auto;
+}
+
+
+/* __________________________________________________________________________________________ 
+|                                           SECTION PRODUTOS  |                                               
+_______________________________________________________________________________________________ 
+*/
+
+section .produtos {
+    padding: 30px;
+    margin: auto;
+    width: 75%;
+}
+
+section .prod {
+    text-align: center;
+    width: calc(33.333% - 5px);
+    display: inline-block;
+    margin-top: 20px;
+    line-height: 1.5;
+    font-size: 10pt;
+}
+
+main section img {
+    width: 100%;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+
+/* __________________________________________________________________________________________ 
+|                                           FOOTER  |                                               
+_______________________________________________________________________________________________ 
+*/
+
+footer .footer {
+    background: #e6e6e6;
+    display: flex;
+    padding-top: 30px;
+    padding-left: 30px;
+    width: 75%;
+    margin: auto;
+}
+
+footer .footer_dados_1 {
+    flex-direction: column;
+    display: flex;
+}
+
+footer .footer_contacts {
+    margin: auto;
+    padding: 10px;
+    display: flex;
+}
+
+footer .footer_contacts li {
+    float: left;
+    width: calc(30% - 5px);
+    color: #d94a26;
+    list-style: none;
+}
+
+footer .footer_midia {
+    display: flex;
+}
+
+footer .footer_midia img {
+    padding: 30%;
+}
+
+footer .footer_email {
+    background: #fff;
+    margin-top: 10px;
+    padding: 35px;
+    float: right;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+footer .footer_email input {
+    width: 60%;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+footer .footer_email button {
+    background: #d73a1e;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100px;
+    color: #fff;
+}
+
+footer .footer_contacts p {
+    margin-top: 50px;
+    padding: 5px;
+    line-height: 1.5;
+    float: left;
+}
+
+footer .footer p:nth-child(1) {
+    font-style: italic;
+    font-size: 14pt;
+}
+
+footer .footer p {
+    margin: 10px;
+}
+
+
+/* __________________________________________________________________________________________ 
+|                                           MODAL  |                                               
+_______________________________________________________________________________________________ 
+*/
+
+.format_modal {
+    display: flex;
+}
+
+.modal-content img {
+    float: left;
+}
+
+.info_modal h3,
+.info_modal p {
+    float: right;
+    padding: 2px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.842);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 2% auto;
+    padding-top: 2%;
+    padding-bottom: 3%;
+    padding-left: 0%;
+    padding-right: 5%;
+    border: 1px solid #888;
+    width: 50%;
+    display: flex;
+}
+
+.close {
+    color: #000;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    top: -7%;
+    left: 105%;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* __________________________________________________________________________________________ 
+|                                           MEDIA QUERIE  |                                               
+_______________________________________________________________________________________________ 
+*/
+
+@media screen and (max-width: 200px) {
+    header .search,
+    header .logo2,
+    nav .nav_links,
+    nav .nav_login,
+    footer .footer_contacts {
+        display: none;
+    }
+    header .header {
+        margin: auto;
+        display: flex;
+    }
+    header .logo {
+        margin: auto;
+        display: flex;
+    }
+    header .nav_button {
+        display: flex;
+        margin-right: 10px;
+    }
+    header .nav_button span {
+        transform: rotateZ(180deg);
+        border: 3px solid #523468;
+        margin: 1px;
+        padding-top: 20px;
+    }
+    header .header_logos {
+        flex-direction: column;
+        display: flex;
+    }
+    header .logo3 {
+        display: flex;
+        margin: auto;
+    }
+    header .logo4 {
+        /* margin: auto; */
+        display: flex;
+    }
+    header img {
+        width: 100%
+    }
+    nav .nav {
+        padding: 10px;
+        background: #ececec;
+        justify-content: center;
+        content: "Free shipping on orders over $50";
+        color: #8b8b8b;
+        font-size: 14pt;
+    }
+    nav .nav::after {
+        display: flex;
+        content: "Free shipping on orders over $50";
+    }
+    section .prod {
+        width: calc(50.333% - 5px);
+        padding: 0;
+    }
+    footer .footer {
+        border: 2px solid blue;
+        display: flex;
+        text-align: center;
+        padding: 0;
+        flex-direction: column;
+    }
+    footer .footer_dados_1 {
+        border: 2px solid orange;
+        margin: 0;
+        padding: 0;
+    }
+    footer .footer_midia {
+        padding: 5%;
+        margin: auto;
+    }
+    footer .footer_midia a {
+        margin: 10px;
+    }
+    footer .footer_dados_2 {
+        border: 2px solid red;
+        display: flex;
+        margin: auto;
+    }
+    footer .footer_email {
+        margin: auto;
+        width: 90%;
+    }
+}
