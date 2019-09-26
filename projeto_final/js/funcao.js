@@ -1,30 +1,68 @@
-$(document).ready(function() {
-    $("#ok").click(function() {
-        $.ajax({
-            dataType: 'json',
-            url: 'https://cdn.rawgit.com/LucasRuy/1d4a5d45e2ea204d712d0b324af28bab/raw/342e0e9277be486102543c7f50ef5fcf193234b6/potions.json',
-            method: 'GET',
-            success: function(resposta) {
-                var produtos = resposta.potions;
-                var msg = '';
-                // produtos = JSON.parse(produtos);
+var modal_aging = document.getElementById("modal_aging");
+var info_modal = document.querySelector('.info_modal');
+var prod = document.getElementsByClassName("prod");
+var ingredientes = document.getElementById("modal_ingredients");
+var cont = 0;
 
-                // for (let i = 1; i <= 3; i++) {
-                //     msg += `${produtos.name}`;
-                // }
-
-                for (p in produtos) {
-                    msg += `${produtos[p].name}`;
-                    console.log('p', p);
-                    console.log('msg p', msg[p]);
-                }
-                var output = document.querySelector('#output');
-                output.innerHTML = msg;
-                console.log('produtos', produtos);
-            },
-            error: function(erro) {
-                console.log("Erro: " + erro)
-            }
-        });
+/*    FOR SOBRE CLASS DOS PRODUTOS     */
+for (let i = 0; i < prod.length; i++) {
+    prod[i].addEventListener('click', function() {
+        cont = i + 1;
+        mostrar(cont);
+        lerApi(cont);
     });
-});
+}
+
+/*    ABRIR POPUP     */
+function mostrar(cont) {
+    modal_aging.classList.add('abrir');
+}
+
+/*    FECHAR POPUP     */
+function fechar(cont) {
+    modal_aging.classList.remove('abrir');
+    ingredientes.innerHTML = '';
+}
+
+window.onclick = function(event) {
+    if (event.currentTarget == modal_aging) {
+        modal_aging.style.display = "none";
+        modal_aging.classList.remove('abrir');
+    }
+}
+
+/*      AJAX       */
+function lerApi(cont) {
+    var destino = "https://cdn.rawgit.com/LucasRuy/1d4a5d45e2ea204d712d0b324af28bab/raw/342e0e9277be486102543c7f50ef5fcf193234b6/potions.json";
+    var xhttp = new XMLHttpRequest();
+    var msg = '';
+    var produtos;
+
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var produtos = JSON.parse(this.responseText);
+            console.log(produtos.potions[1].ingredients);
+
+            var name = document.getElementById("modal_name");
+            var efeitos = document.getElementById("modal_effect");
+            var price = document.getElementById("modal_price");
+            var image = document.getElementById("modal_image");
+
+
+            name.innerHTML = `${produtos.potions[cont].name}`;
+            efeitos.innerHTML = `${produtos.potions[cont].effect}`;
+            price.innerHTML = `$${produtos.potions[cont].price}`;
+            image.src = `../projeto_final/images/products/${produtos.potions[cont].image}`;
+
+
+            for (let j = 0; j < produtos.potions[cont].ingredients.length; j++) {
+                var ul = document.getElementById('modal_ingredients');
+                var li = document.createElement('li');
+                ul.appendChild(li);
+                li.innerHTML = `${produtos.potions[cont].ingredients[j]}`;
+            }
+        }
+    }
+    xhttp.open("GET", destino, true);
+    xhttp.send();
+}

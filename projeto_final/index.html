@@ -6,24 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-
     <link rel="stylesheet" href="css/style.css">
 
     <title>Projeto Final</title>
 </head>
 
 <body>
-    <div class="logo1"></div>
+    <div class="layout_original"></div>
+    <div class="layout_original2"></div>
     <div id="interface">
-        <!-- __________________________________________________________________________________________ 
-                                        |            HEADER  |                                               
-        _______________________________________________________________________________________________ 
-         -->
+
+        <!-- HEADER   -->
         <header>
             <section>
                 <div class="header">
-                    <div class="nav_button" onclick="teste()">
+                    <div class="nav_button" onclick="ocultar()">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -34,9 +31,9 @@
                     </div>
                     <div class="search">
                         <form action="">
-                            <!-- <i class="fa fa-fw fa-search"></i> -->
+
                             <?xml version="1.0" encoding="iso-8859-1"?>
-                            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve">
                                 <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
                                 s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
@@ -55,16 +52,15 @@
                             <img src="images/logo3.png" alt="Logo 3">
                         </div>
                         <div class="logo4">
+
                             <img src="images/logo4.png" alt="Logo 4">
                         </div>
                     </div>
                 </div>
             </section>
         </header>
-        <!-- __________________________________________________________________________________________ 
-                                        |            NAVEGADOR  |                                               
-        _______________________________________________________________________________________________ 
-            -->
+
+        <!-- NAVEGADOR   -->
         <nav>
             <section>
                 <div class="nav">
@@ -86,81 +82,80 @@
 
             </section>
         </nav>
+
+        <!-- MAIN   -->
         <main>
-            <!-- __________________________________________________________________________________________ 
-                                           |            PRODUTOS  |                                               
-            _______________________________________________________________________________________________ 
-                -->
             <section>
                 <div class="produtos">
                     <h3>Potion</h3>
-                    <div class="prod" id="aging" onclick="aging()">
-                        <img src="images/products/aging-potion.png" alt="Aging Potions">
-                        <h3>Aging Potion - $29,99</h3>
+                    <div class="prod" name="aging" data-potion="aging-potion">
+                        <img class="aging" id="aging" name="Aging Potion" src="images/products/aging-potion.png" alt="Aging Potions">
+                        <h3>Aging Potion</h3>
                     </div>
 
-                    <div class="prod">
-                        <img src="images/products/bulgeye-potion.png" alt="Bulgeye Potion">
-                        <h4>Bulgeye Potion - $19,99</h4>
+                    <div class="prod" name="bulgeye" data-potion="bulgeye-potion">
+                        <img class="bulgeye" name="Bulgeye" src="images/products/bulgeye-potion.png" alt="Bulgeye Potion">
+                        <h4>Bulgeye Potion</h4>
                     </div>
 
-                    <div class="prod">
-                        <img src="images/products/dragon-tonic.png" alt="Dragon Tonic">
-                        <h4>Dragon Tonic - $64,99</h4>
+                    <div class="prod" name="dragon" data-potion="dragon-tonic">
+                        <img class="dragon" name="Dragon Tonic" id="dragon" src="images/products/dragon-tonic.png" alt="Dragon Tonic">
+                        <h4>Dragon Tonic</h4>
                     </div>
 
-                    <div class="prod">
-                        <img src="images/products/love-potion.png" alt="Love Potion">
-                        <h4>Love Potion - $29,99</h4>
+                    <div class="prod" name="love" data-potion="love-potion">
+                        <img class="love" name="Love Potion" id="love" src="images/products/love-potion.png" alt="Love Potion">
+                        <h4>Love Potion</h4>
                     </div>
 
-                    <div class="prod">
-                        <img src="images/products/polyjuice-potion.png" alt="Polyjuice Potions">
-                        <h4>Polyjuice Potion - $99,99</h4>
+                    <div class="prod" name="polyjuice" data-potion="polyjuice-potion">
+                        <img class="polyjuice" name="polyjuice" src="images/products/polyjuice-potion.png" alt="Polyjuice Potions">
+                        <h4>Polyjuice Potion</h4>
                     </div>
 
-                    <div class="prod">
-                        <img src="images/products/sleeping-draught.png" alt="Sleeping Potions">
-                        <h4>Sleeping Draught Potion - $14,99</h4>
+                    <div class="prod" name="sleeping" data-potion="sleeping-draught">
+                        <img class="sleeping" name="Sleeping Potions" src="images/products/sleeping-draught.png" alt="Sleeping Potions">
+                        <h4>Sleeping Draught Potion</h4>
                     </div>
 
                 </div>
             </section>
 
-            <!-- __________________________________________________________________________________________ 
-                                           |        MODAL|                                               
-            _______________________________________________________________________________________________ 
-                -->
+            <!-- MODAL   -->
             <section>
                 <div id="modal_aging" class="modal">
-                    <div class="format_modal">
-                        <div class="modal-content">
-                            <span onclick="span()" class="close">&times;</span>
-                            <div class="imagem_modal">
-
-                                <img src="images/products/aging-potion.png" alt="Aging Potions">
-                            </div>
-                            <div class="info_modal"></div>
-
+                    <div class="modal_content">
+                        <div class="modal_button_fechar">
+                            <span onclick="fechar()" class="close">&times;</span>
                         </div>
-                    </div>
-                </div>
+                        <div class="info_modal">
 
-                <div id="bulgeye" class="modal">
-                    <div class="format_modal">
-                        <div class="modal-content">
-                            <span onclick="span()" class="close">&times;</span>
-                            <img src="images/products/bulgeye-potion.png" alt="Bulgeye Potion">
-                            <h4>Bulgeye Potion - $19,99</h4>
+                            <div class="modal_dados_image">
+
+                                <div class="modal_image">
+                                    <img id="modal_image" class="image_modal">
+                                </div>
+
+                                <div class="modal_dados_button">
+                                    <div class="modal_dados">
+                                        <h3 id="modal_name" class="modal_title"></h3><br>
+                                        <h3 id="modal_title" class="modal_title">Use/Effect:</h3>
+                                        <p id="modal_effect" class="modal_title"></p>
+                                        <p id="modal_price" class="modal_title"></p>
+                                        <h3 class="modal_title">Ingredients:</h3>
+                                        <ul id="modal_ingredients" class="modal_title"></ul>
+                                    </div>
+                                    <button class="modal_button_add">ADD TO CARD</button>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-        <!-- __________________________________________________________________________________________ 
-                                           |        FOOTER                                               
-        _______________________________________________________________________________________________ 
-        -->
+
+        <!-- _FOOTER   -->
         <footer>
             <div class="footer">
                 <section>
@@ -183,16 +178,16 @@
                             <a href="https://www.facebook.com/" target="t_blank">
                                 <img src="images/facebook.png" alt=""></a>
 
-                            <a href="https://www.facebook.com/" target="t_blank">
+                            <a href="https://www.twitter.com/" target="t_blank">
                                 <img src="images/twitter.png" alt=""></a>
 
-                            <a href="https://www.facebook.com/" target="t_blank">
+                            <a href="https://www.twitter.com/" target="t_blank">
                                 <img src="images/pinterest.png" alt=""></a>
 
-                            <a href="https://www.facebook.com/" target="t_blank">
+                            <a href="https://www.tumblr.com/" target="t_blank">
                                 <img src="images/tumb.png" alt=""></a>
 
-                            <a href="https://www.facebook.com/" target="t_blank">
+                            <a href="https://www.google.com/" target="t_blank">
                                 <img src="images/google.png" alt=""></a>
                         </div>
 
@@ -215,76 +210,7 @@
             </div>
         </footer>
     </div>
-    <script>
-        function teste() {
-            alert("Teste")
-        }
-
-        var modal_aging = document.getElementById("modal_aging");
-        var bulgeye = document.getElementById("bulgeye");
-
-        var aging = document.querySelector("#aging");
-
-        var span = document.getElementsByClassName("close")[0];
-
-        aging = () => {
-            modal_aging.style.display = "block";
-        }
-
-        span = () => {
-            modal_aging.style.display = "none";
-        }
-
-        window.onclick = function(event) {
-
-            switch (event) {
-                case modal_aging:
-                    modal_aging.style.display = "none";
-            }
-        }
-
-        /*_____________________________________________________________
-                                        AJAX                         
-        _______________________________________________________________*/
-        var produtos;
-
-        function lerApi() {
-            var destino = "https://cdn.rawgit.com/LucasRuy/1d4a5d45e2ea204d712d0b324af28bab/raw/342e0e9277be486102543c7f50ef5fcf193234b6/potions.json";
-            var xhttp = new XMLHttpRequest();
-            var msg = '';
-            var demo = document.querySelector('#demo');
-
-            xhttp.onreadystatechange = function() {
-                var produtos;
-                if (this.readyState == 4 && this.status == 200) {
-                    produtos = JSON.parse(this.responseText);
-                    console.log(produtos)
-                        // produtos = document.getElementById("demo").innerHTML = this.responseText;
-                }
-
-                var info_modal = document.querySelector('.info_modal');
-
-                if (produtos.potions[1].name) {
-                    msg += `<h3>${produtos.potions[1].name}</h3><br>`;
-                    msg += `<h3>Use/Effects</h3><br>`;
-                    msg += `<p>${produtos.potions[1].effect}</p><br>`;
-                    msg += `<h3>Ingredients:</h3><br>`;
-                    msg += `<p>${produtos.potions[1].ingredients[0]}</p><br>`;
-                    msg += `<p>${produtos.potions[1].ingredients[1]}</p><br>`;
-                    msg += `<p>${produtos.potions[1].ingredients[2]}</p><br>`;
-                    msg += `<p>${produtos.potions[1].ingredients[3]}</p><br>`;
-                    msg += `<p>${produtos.potions[1].ingredients[4]}</p><br>`;
-                    msg += `<p>${produtos.potions[1].ingredients[5]}</p><br>`;
-                    msg += `<h3>Preço</h3><br>`;
-                    msg += `<p>${produtos.potions[1].price}</p>`;
-                    info_modal.innerHTML = msg;
-                }
-            };
-            xhttp.open("GET", destino, true);
-            xhttp.send();
-        }
-        lerApi();
-    </script>
+    <script src="js/funcao.js"></script>
 </body>
 
 </html>

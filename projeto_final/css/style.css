@@ -1,26 +1,15 @@
-/* .logo1 {
-    position: absolute;
-    left: 160px;
-    background: url("../images/potions-layout.png");
-    width: 1024px;
-    height: 1266px;
-    margin: auto;
-    opacity: .1;
-    text-align: center;
-    opacity: 0;
-} */
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+#interface {
+    opacity: 1;
+}
 
-/* __________________________________________________________________________________________ 
-|                                           HEADER  |                                               
-_______________________________________________________________________________________________ 
-*/
+
+/*  HEADER   */
 
 header .header {
     width: 75%;
@@ -41,14 +30,6 @@ header .header {
     margin-top: 8px;
 }
 
-
-/* header .fa-search {
-    position: absolute;
-    line-height: 2.3;
-    margin-left: 2%;
-    color: #d94a26;
-} */
-
 header input[type="search"] {
     /* position: relative; */
     border: 1px solid black;
@@ -61,10 +42,7 @@ header input[type="search"] {
 }
 
 
-/* __________________________________________________________________________________________ 
-|                                           NAV  |                                               
-_______________________________________________________________________________________________ 
-*/
+/*  NAVEGADOR   */
 
 nav .nav_button span {
     background: black;
@@ -103,10 +81,7 @@ nav .nav_login {
 }
 
 
-/* __________________________________________________________________________________________ 
-|                                           SECTION PRODUTOS  |                                               
-_______________________________________________________________________________________________ 
-*/
+/*  MAIN - SECTION   */
 
 section .produtos {
     padding: 30px;
@@ -125,15 +100,11 @@ section .prod {
 
 main section img {
     width: 100%;
-    border: 1px solid red;
     cursor: pointer;
 }
 
 
-/* __________________________________________________________________________________________ 
-|                                           FOOTER  |                                               
-_______________________________________________________________________________________________ 
-*/
+/*  FOOTER   */
 
 footer .footer {
     background: #e6e6e6;
@@ -167,7 +138,7 @@ footer .footer_midia {
 }
 
 footer .footer_midia img {
-    padding: 30%;
+    padding: 10px;
 }
 
 footer .footer_email {
@@ -175,7 +146,7 @@ footer .footer_email {
     margin-top: 10px;
     padding: 35px;
     float: right;
-    margin-bottom: 40px;
+    margin-bottom: 10%;
     margin-right: 20px;
 }
 
@@ -191,7 +162,7 @@ footer .footer_email button {
     border: none;
     padding: 10px;
     border-radius: 5px;
-    width: 100px;
+    width: 30%;
     color: #fff;
 }
 
@@ -212,23 +183,57 @@ footer .footer p {
 }
 
 
-/* __________________________________________________________________________________________ 
-|                                           MODAL  |                                               
-_______________________________________________________________________________________________ 
-*/
+/*  MODAL   */
 
-.format_modal {
-    display: flex;
-}
-
-.modal-content img {
-    float: left;
-}
-
-.info_modal h3,
-.info_modal p {
+.modal_dados {
     float: right;
-    padding: 2px;
+    margin-right: 5%;
+    padding: 5%;
+}
+
+.modal_dados li {
+    list-style: none;
+}
+
+.info_modal {
+    display: flex;
+    padding-right: 5%;
+}
+
+.modal_dados_image {
+    flex-direction: row;
+    display: flex;
+    margin: center;
+}
+
+.modal_dados_button {
+    margin: auto;
+    vertical-align: center;
+}
+
+.modal_button_fechar span {
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.modal_button_add {
+    background: #d73a1e;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 120px;
+    height: 10%;
+    color: #fff;
+    float: right;
+    display: flex;
+    margin-bottom: 30%;
+}
+
+.modal_image img {
+    float: left;
+    background-attachment: scroll;
+    margin-top: 20%;
 }
 
 .modal {
@@ -243,16 +248,18 @@ ________________________________________________________________________________
     background-color: rgba(0, 0, 0, 0.842);
 }
 
-.modal-content {
+.modal_content {
     background-color: #fefefe;
     margin: 2% auto;
-    padding-top: 2%;
-    padding-bottom: 3%;
-    padding-left: 0%;
-    padding-right: 5%;
+    padding: 5%;
     border: 1px solid #888;
     width: 50%;
+}
+
+.modal.abrir {
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .close {
@@ -260,9 +267,6 @@ ________________________________________________________________________________
     float: left;
     font-size: 28px;
     font-weight: bold;
-    position: relative;
-    top: -7%;
-    left: 105%;
 }
 
 .close:hover,
@@ -273,12 +277,9 @@ ________________________________________________________________________________
 }
 
 
-/* __________________________________________________________________________________________ 
-|                                           MEDIA QUERIE  |                                               
-_______________________________________________________________________________________________ 
-*/
+/*  MEDIA QUERIE   */
 
-@media screen and (max-width: 200px) {
+@media screen and (max-width: 900px) {
     header .search,
     header .logo2,
     nav .nav_links,
@@ -287,6 +288,7 @@ ________________________________________________________________________________
         display: none;
     }
     header .header {
+        width: 75%;
         margin: auto;
         display: flex;
     }
@@ -313,7 +315,6 @@ ________________________________________________________________________________
         margin: auto;
     }
     header .logo4 {
-        /* margin: auto; */
         display: flex;
     }
     header img {
@@ -336,14 +337,12 @@ ________________________________________________________________________________
         padding: 0;
     }
     footer .footer {
-        border: 2px solid blue;
         display: flex;
         text-align: center;
         padding: 0;
         flex-direction: column;
     }
     footer .footer_dados_1 {
-        border: 2px solid orange;
         margin: 0;
         padding: 0;
     }
@@ -355,12 +354,23 @@ ________________________________________________________________________________
         margin: 10px;
     }
     footer .footer_dados_2 {
-        border: 2px solid red;
         display: flex;
         margin: auto;
     }
     footer .footer_email {
         margin: auto;
         width: 90%;
+    }
+    /*_______________________________*/
+    .menu_resposnsivo {
+        display: absolute;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.842);
     }
 }
