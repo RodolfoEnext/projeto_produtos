@@ -425,10 +425,10 @@ footer .footer p {
     }
     footer .footer_midia {
         padding: 5%;
-        margin: auto;
+        padding: 0;
     }
     footer .footer_midia a {
-        margin: 10px;
+        margin: auto;
     }
     footer .footer_dados_2 {
         display: flex;
