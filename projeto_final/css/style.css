@@ -336,6 +336,27 @@ footer .footer p {
         color: #8b8b8b;
         font-size: 14pt;
     }
+    .modal_dados_image {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    .modal_dados {
+        padding: 0;
+        float: none;
+        margin: 0;
+    }
+    .modal_content {
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    .modal_dados_button {
+        padding: 0;
+    }
+    .modal_image {
+        margin: 0;
+    }
     nav .nav::after {
         display: flex;
         content: "Free shipping on orders over $50";
