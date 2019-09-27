@@ -12,18 +12,45 @@
 </head>
 
 <body>
+
     <div class="layout_original"></div>
     <div class="layout_original2"></div>
     <div id="interface">
+
+
+        <div class="nav_response">
+            <div class="nav_links_response">
+                <a>Potions</a><i class="fa fa-caret-down"></i>
+                <a>Ingredients</a><i class="fa fa-caret-down"></i>
+                <a>Books</a><i class="fa fa-caret-down"></i>
+                <a>Supplies</a><i class="fa fa-caret-down"></i>
+                <a>Charms</a><i class="fa fa-caret-down"></i>
+                <a>Clearance</a>
+            </div>
+
+            <div class="nav_login_response">
+                <a>Sign In</a>
+                <a>Sign Up</a>
+            </div>
+        </div>
+
 
         <!-- HEADER   -->
         <header>
             <section>
                 <div class="header">
-                    <div class="nav_button" onclick="ocultar()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
+                    <div class="nav_button_config" onclick="clickNav()">
+                        <div class="nav_button_open">
+                            <!-- <span></span>
+                            <span></span>
+                            <span></span> -->
+                            <img src="images/abrir.png" alt="">
+                        </div>
+
+                        <div class="nav_button_close oculto">
+                            <!-- <span>x</span> -->
+                            <img src="images/fechar.png" alt="">
+                        </div>
                     </div>
                     <div class="logo">
 
@@ -77,7 +104,6 @@
                         <a>Sign In</a>&nbsp;or
                         <a>Sign Up</a>
                     </div>
-
                 </div>
 
             </section>
@@ -90,32 +116,32 @@
                     <h3>Potion</h3>
                     <div class="prod" name="aging" data-potion="aging-potion">
                         <img class="aging" id="aging" name="Aging Potion" src="images/products/aging-potion.png" alt="Aging Potions">
-                        <h3>Aging Potion</h3>
+                        <h4>Aging Potion $29,99</h4>
                     </div>
 
                     <div class="prod" name="bulgeye" data-potion="bulgeye-potion">
                         <img class="bulgeye" name="Bulgeye" src="images/products/bulgeye-potion.png" alt="Bulgeye Potion">
-                        <h4>Bulgeye Potion</h4>
+                        <h4>Bulgeye Potion $19,99</h4>
                     </div>
 
                     <div class="prod" name="dragon" data-potion="dragon-tonic">
                         <img class="dragon" name="Dragon Tonic" id="dragon" src="images/products/dragon-tonic.png" alt="Dragon Tonic">
-                        <h4>Dragon Tonic</h4>
+                        <h4>Dragon Tonic $64,99</h4>
                     </div>
 
                     <div class="prod" name="love" data-potion="love-potion">
                         <img class="love" name="Love Potion" id="love" src="images/products/love-potion.png" alt="Love Potion">
-                        <h4>Love Potion</h4>
+                        <h4>Love Potion $29,99</h4>
                     </div>
 
                     <div class="prod" name="polyjuice" data-potion="polyjuice-potion">
                         <img class="polyjuice" name="polyjuice" src="images/products/polyjuice-potion.png" alt="Polyjuice Potions">
-                        <h4>Polyjuice Potion</h4>
+                        <h4>Polyjuice Potion $99,99</h4>
                     </div>
 
                     <div class="prod" name="sleeping" data-potion="sleeping-draught">
                         <img class="sleeping" name="Sleeping Potions" src="images/products/sleeping-draught.png" alt="Sleeping Potions">
-                        <h4>Sleeping Draught Potion</h4>
+                        <h4>Sleeping Draught Potion $14,99</h4>
                     </div>
 
                 </div>
@@ -139,12 +165,12 @@
                                 <div class="modal_dados_button">
                                     <div class="modal_dados">
                                         <h3 id="modal_name" class="modal_title"></h3><br>
-                                        <h3 id="modal_title" class="modal_title">Use/Effect:</h3>
-                                        <p id="modal_effect" class="modal_title"></p>
-                                        <p id="modal_price" class="modal_title"></p>
-                                        <h3 class="modal_title">Ingredients:</h3>
-                                        <ul id="modal_ingredients" class="modal_title"></ul>
+                                        <h3 id="modal_title" class="modal_title">Use/Effect:</h3><br>
+                                        <p id="modal_effect" class="modal_title"></p><br>
+                                        <h3 class="modal_title">Ingredients:</h3><br>
+                                        <ul id="modal_ingredients" class="modal_title"></ul><br>
                                     </div>
+                                    <p id="modal_price" class="modal_title"></p><br>
                                     <button class="modal_button_add">ADD TO CARD</button>
                                 </div>
                             </div>

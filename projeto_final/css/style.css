@@ -8,8 +8,20 @@
     opacity: 1;
 }
 
+.oculto {
+    opacity: 0;
+}
+
+.display {
+    display: none;
+}
+
 
 /*  HEADER   */
+
+header .nav_button_open {
+    display: none;
+}
 
 header .header {
     width: 75%;
@@ -24,14 +36,12 @@ header .header {
 #Capa_1 {
     width: 20px;
     position: absolute;
-    /* line-height: 2.3; */
     margin-left: 30px;
     justify-content: center;
     margin-top: 8px;
 }
 
 header input[type="search"] {
-    /* position: relative; */
     border: 1px solid black;
     margin-left: 20px;
     margin-right: 140px;
@@ -43,18 +53,6 @@ header input[type="search"] {
 
 
 /*  NAVEGADOR   */
-
-nav .nav_button span {
-    background: black;
-    border: 2px solid red;
-    margin: 1px;
-}
-
-header .nav_button {
-    width: 10px;
-    height: 10px;
-    transform: rotateZ(90deg)
-}
 
 nav .nav {
     background: #523468;
@@ -277,6 +275,20 @@ footer .footer p {
 }
 
 
+/*      NAV RESPONSE     */
+
+.nav_response {
+    position: absolute;
+    transform: translateX(-800px);
+    /* left: -850px; */
+    width: 75%;
+    margin: auto;
+    background: #523468;
+    padding: 20px;
+    display: flex;
+}
+
+
 /*  MEDIA QUERIE   */
 
 @media screen and (max-width: 900px) {
@@ -296,16 +308,6 @@ footer .footer p {
         margin: auto;
         display: flex;
     }
-    header .nav_button {
-        display: flex;
-        margin-right: 10px;
-    }
-    header .nav_button span {
-        transform: rotateZ(180deg);
-        border: 3px solid #523468;
-        margin: 1px;
-        padding-top: 20px;
-    }
     header .header_logos {
         flex-direction: column;
         display: flex;
@@ -324,13 +326,81 @@ footer .footer p {
         padding: 10px;
         background: #ececec;
         justify-content: center;
-        content: "Free shipping on orders over $50";
         color: #8b8b8b;
         font-size: 14pt;
     }
     nav .nav::after {
         display: flex;
         content: "Free shipping on orders over $50";
+    }
+    /*  NAV RESPONSIVO  */
+    header .nav_button_config {
+        display: block;
+    }
+    header .nav_button_open {
+        display: block;
+        position: absolute;
+        width: 5%;
+        margin: auto;
+        /* transform: rotateZ(90deg); */
+    }
+    /* header .nav_button_open span {
+        border: 3px solid #523468;
+        margin: 1px;
+    } */
+    .nav_response {
+        /* display: none; */
+        top: 120px;
+        transform: translateX(-620px);
+        /* left: -850px; */
+        width: 75%;
+        margin: auto;
+        background: #523468;
+        padding: 20px;
+        /* display: block; */
+    }
+    .volta {
+        top: 120px;
+        transform: translateX(90px);
+        width: 75%;
+        margin: auto;
+        background: #523468;
+        padding: 20px;
+    }
+    .nav_links_response a:hover {
+        margin: 1%;
+        background: #422a53;
+        color: white;
+    }
+    .nav_links_response a {
+        display: block;
+        padding: 2%;
+        margin: 2%;
+        color: white;
+    }
+    .nav_login_response {
+        text-align: center;
+        border-radius: 4px;
+    }
+    .nav_login_response a {
+        display: inline-block;
+        padding: 2%;
+        margin: 2%;
+        text-align: center;
+        color: white;
+    }
+    .nav_login_response a:hover {
+        background: #422a53;
+        border-radius: 4px;
+    }
+    header .nav_button_close {
+        font-size: 35pt;
+        transform: rotateZ(90deg);
+    }
+    header .nav_button_close span {
+        font-family: sans-serif;
+        color: green;
+        margin: 1px;
     }
     section .prod {
         width: calc(50.333% - 5px);
@@ -360,17 +430,5 @@ footer .footer p {
     footer .footer_email {
         margin: auto;
         width: 90%;
-    }
-    /*_______________________________*/
-    .menu_resposnsivo {
-        display: absolute;
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow: auto;
-        background-color: rgba(0, 0, 0, 0.842);
     }
 }

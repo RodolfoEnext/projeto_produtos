@@ -2,7 +2,23 @@ var modal_aging = document.getElementById("modal_aging");
 var info_modal = document.querySelector('.info_modal');
 var prod = document.getElementsByClassName("prod");
 var ingredientes = document.getElementById("modal_ingredients");
+var nav_response = document.querySelector(".nav_response");
+var nav_button_config = document.getElementsByClassName("nav_button_config")
+var nav_button_close = document.querySelector(".nav_button_close");
+var nav_button_open = document.querySelector(".nav_button_open");
 var cont = 0;
+
+console.log(nav_button_config.length);
+
+function clickNav() {
+    for (let i = 0; i < nav_button_config.length; i++) {
+        nav_button_config[i].addEventListener('click', function() {
+            nav_button_config[i].classList.add('volta');
+            nav_button_config[i].classList.remove('volta');
+
+        });
+    }
+}
 
 /*    FOR SOBRE CLASS DOS PRODUTOS     */
 for (let i = 0; i < prod.length; i++) {
@@ -24,12 +40,6 @@ function fechar(cont) {
     ingredientes.innerHTML = '';
 }
 
-window.onclick = function(event) {
-    if (event.currentTarget == modal_aging) {
-        modal_aging.style.display = "none";
-        modal_aging.classList.remove('abrir');
-    }
-}
 
 /*      AJAX       */
 function lerApi(cont) {
