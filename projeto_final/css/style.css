@@ -4,6 +4,13 @@
     padding: 0;
 }
 
+div div,
+li,
+a,
+input {
+    border: 1px solid red;
+}
+
 #interface {
     opacity: 1;
 }
