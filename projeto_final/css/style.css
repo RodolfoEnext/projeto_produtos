@@ -336,7 +336,12 @@ footer .footer_copyright {
     align-items: center;
 }
 
+.modal_price_title {
+    text-align: center;
+}
+
 .modal_price {
+    text-align: center;
     color: #d73a1e;
     font-weight: bold;
 }
@@ -680,6 +685,6 @@ footer .footer_copyright {
         font-weight: normal;
     }
     .modal_content {
-        width: 60%;
+        width: 50%;
     }
 }
