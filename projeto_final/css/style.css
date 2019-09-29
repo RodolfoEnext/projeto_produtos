@@ -146,6 +146,13 @@ section .prod {
     font-size: 10pt;
 }
 
+section .prod:hover {
+    opacity: .7;
+    transform: scale(1.01);
+    transition-timing-function: cubic-bezier(.68, -0.55, .27, 1.55);
+    transition-duration: .5s;
+}
+
 main section img {
     width: 100%;
     cursor: pointer;

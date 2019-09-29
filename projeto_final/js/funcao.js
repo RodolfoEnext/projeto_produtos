@@ -45,6 +45,7 @@ fecharMenuMobile = () => {
     main.style.display = 'flex';
     footer.style.display = 'flex';
     nav.style.display = 'flex';
+
 }
 
 /*    FOR SOBRE CLASS DOS PRODUTOS     */
