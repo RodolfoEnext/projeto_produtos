@@ -250,18 +250,19 @@ footer .footer_copyright {
 .modal_dados p {
     /* font-family: sans-serif; */
     font-size: 12pt;
-    margin: 5px;
+    /* margin: 5px; */
 }
 
 .modal_dados {
     float: right;
     margin: 3%;
-    padding: 5%;
+    padding: 10%;
+    padding-left: 0;
 }
 
 .modal_dados li {
     list-style: none;
-    margin: 5px;
+    /* margin: 5px; */
     padding: 0;
 }
 
@@ -282,9 +283,10 @@ footer .footer_copyright {
 }
 
 .modal_button_fechar span {
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     float: right;
+    margin: 5px;
 }
 
 .modal_button_add {
@@ -298,7 +300,7 @@ footer .footer_copyright {
     float: right;
     /* display: flex; */
     margin: 10px;
-    margin-bottom: 2%;
+    margin-bottom: 10%;
 }
 
 .modal_button_add:hover {
@@ -340,18 +342,14 @@ footer .footer_copyright {
     align-items: center;
 }
 
-.modal_price_title {
-    text-align: center;
-}
-
 .modal_price {
-    text-align: center;
+    /* margin-left: 10px; */
     color: #d73a1e;
     font-weight: bold;
 }
 
 .close {
-    color: #000;
+    color: rgba(26, 25, 25, 0.507);
     float: left;
     font-size: 28px;
     font-weight: bold;
@@ -491,16 +489,16 @@ footer .footer_copyright {
     header .nav_button_close span {
         position: absolute;
         width: 30px;
-        border: 3px solid green;
+        /* border: 3px solid green; */
         display: flex;
     }
     header .nav_button_close span:nth-child(1) {
         transform: rotateZ(-56deg);
-        border: 3px solid #523468;
+        border: 2px solid #523468;
     }
     header .nav_button_close span:last-child {
         transform: rotateZ(60deg);
-        border: 3px solid #523468;
+        border: 2px solid #523468;
     }
     section .produtos h4 {
         font-size: 12pt;
