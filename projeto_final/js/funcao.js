@@ -10,6 +10,7 @@ var header_logos = document.querySelector('.header_logos');
 var search = document.querySelector('.search');
 var main = document.querySelector('main');
 var footer = document.querySelector('footer');
+var nav = document.querySelector('.nav');
 // var produtos = 0;
 var cont = 0;
 
@@ -31,6 +32,7 @@ abrirMenuMobile = () => {
     search.style.display = 'flex';
     main.style.display = 'none';
     footer.style.display = 'none';
+    nav.style.display = 'none';
 }
 
 fecharMenuMobile = () => {
@@ -42,6 +44,7 @@ fecharMenuMobile = () => {
     search.style.display = 'none';
     main.style.display = 'flex';
     footer.style.display = 'flex';
+    nav.style.display = 'flex';
 }
 
 /*    FOR SOBRE CLASS DOS PRODUTOS     */
