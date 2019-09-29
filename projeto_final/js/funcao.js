@@ -6,6 +6,12 @@ var nav_response = document.querySelector('.nav_response');
 var nav_button_config = document.getElementsByClassName("nav_button_config")
 var nav_button_close = document.querySelector(".nav_button_close");
 var nav_button_open = document.querySelector(".nav_button_open");
+var logo = document.querySelector('.logo');
+var header_logos = document.querySelector('.header_logos');
+var search = document.querySelector('.search');
+var main = document.querySelector('main');
+var footer = document.querySelector('footer');
+
 var cont = 0;
 
 console.log(nav_button_config.length);
@@ -22,8 +28,14 @@ abrirMenuMobile = () => {
     nav_response.classList.add('volta');
     nav_button_open.classList.add('display');
     nav_button_close.classList.remove('display');
-    console.log(nav_button_open);
-    console.log(nav_response);
+    logo.style.display = 'none';
+    header_logos.style.display = 'none';
+    search.style.display = 'flex';
+    main.style.display = 'none';
+    footer.style.display = 'none';
+
+    // search.style.padding = '5%';
+
 
 }
 
@@ -32,7 +44,12 @@ fecharMenuMobile = () => {
     nav_response.classList.remove('volta');
     nav_button_open.classList.remove('display');
     nav_button_close.classList.add('display');
-    console.log(nav_button_close);
+    logo.style.display = '';
+    header_logos.style.display = 'flex';
+    search.style.display = 'none';
+    main.style.display = 'flex';
+    footer.style.display = 'flex';
+
 }
 
 // fecharMenuMobile = () => {

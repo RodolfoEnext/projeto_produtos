@@ -11,8 +11,17 @@ input {
     border: 1px solid red;
 }
 
-#interface {
+body {
+    margin: auto;
+    width: 75%;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
     opacity: 1;
+    margin: auto;
 }
 
 .oculto {
@@ -22,18 +31,32 @@ input {
 
 /*  HEADER   */
 
+header .header {
+    /* width: 75%; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 3%;
+    justify-content: space-between;
+    /* vertical-align: center; */
+}
+
 header .nav_button_open {
     display: none;
 }
 
-header .header {
-    width: 75%;
-    margin: auto;
-    padding: 30px;
+header .header_logos {
+    /* flex-direction: column; */
+    display: flex;
+}
+
+header .logo4 {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    vertical-align: center;
+}
+
+header .logo4 img {
+    width: 75%;
 }
 
 #Capa_1 {
@@ -61,7 +84,7 @@ nav .nav {
     background: #523468;
     font-style: italic;
     color: #fff;
-    width: 75%;
+    /* width: 75%; */
     margin: auto;
     padding: 25px;
     display: flex;
@@ -87,7 +110,7 @@ nav .nav_login {
 section .produtos {
     padding: 30px;
     margin: auto;
-    width: 75%;
+    /* width: 75%; */
 }
 
 section .prod {
@@ -112,8 +135,8 @@ footer .footer {
     display: flex;
     padding-top: 30px;
     padding-left: 30px;
-    width: 75%;
-    margin: auto;
+    width: 100%;
+    /* margin: auto; */
 }
 
 footer .footer_dados_1 {
@@ -152,10 +175,10 @@ footer .footer_email {
 }
 
 footer .footer_email input {
-    width: 60%;
     border: 1px solid black;
     padding: 10px;
     border-radius: 5px;
+    /* display: flex; */
 }
 
 footer .footer_email button {
@@ -163,7 +186,8 @@ footer .footer_email button {
     border: none;
     padding: 10px;
     border-radius: 5px;
-    width: 30%;
+    /* width: 30%; */
+    margin: 5%;
     color: #fff;
 }
 
@@ -282,32 +306,41 @@ footer .footer p {
 
 .nav_response {
     position: absolute;
-    transform: translateX(-100%);
+    transform: translateX(-120%);
     /* left: -850px; */
     width: 75%;
     margin: auto;
     background: #523468;
     padding: 20px;
-    display: flex;
+    /* display: flex; */
+}
+
+.nav_button_config {
+    display: none;
 }
 
 
 /*  MEDIA QUERIE   */
 
 @media screen and (max-width: 900px) {
-    header .search,
     header .logo2,
     nav .nav_links,
     nav .nav_login,
     footer .footer_contacts {
         display: none;
     }
-    header .header {
-        width: 75%;
-        margin: auto;
-        display: flex;
+    #Capa1 {
+        margin-right: 10%;
     }
-    header .logo {
+    header .search {
+        display: none;
+        margin: auto;
+    }
+    header input[type="search"] {
+        width: 90%;
+    }
+    header .header {
+        /* width: 75%; */
         margin: auto;
         display: flex;
     }
@@ -318,12 +351,14 @@ footer .footer p {
     header .logo3 {
         display: flex;
         margin: auto;
+        width: 50%;
     }
     header .logo4 {
         display: flex;
+        width: 75%;
     }
     header img {
-        width: 100%
+        width: 90%
     }
     nav .nav {
         padding: 10px;
@@ -359,46 +394,60 @@ footer .footer p {
     }
     /*  NAV RESPONSIVO  */
     header .nav_button_config {
-        display: block;
+        display: flex;
+        /* border: 3px solid green; */
+        margin: 2%;
+        /* padding: 3%; */
     }
     header .nav_button_open {
         border: none !important;
+        /* display: flex; */
         display: block;
-        position: absolute;
-        width: 5%;
+        /* position: absolute; */
+        width: 2%;
         margin: auto;
         transform: rotateZ(90deg);
     }
     header .nav_button_open span {
         border: 3px solid #523468;
-        margin: 1px;
+        /* margin: 1px; */
+        margin-left: 1px;
     }
     header .nav_button_close {
-        /* border: 1px solid green; */
-        border: none !important;
-        display: block;
+        /* border: none !important; */
+        /* display: block; */
         position: absolute;
-        width: 5%;
+        width: 2%;
         margin: auto;
-        transform: rotateZ(90deg);
+        display: flex;
+        /* transform: rotateZ(90deg); */
     }
     header .nav_button_close span {
+        position: absolute;
+        width: 30px;
         border: 3px solid green;
-        margin: 1px;
+        display: flex;
+        /* margin: 1px; */
+    }
+    header .nav_button_close span:nth-child(1) {
+        /* display: flex; */
+        transform: rotateZ(-56deg);
+        border: 3px solid #523468;
+    }
+    header .nav_button_close span:last-child {
+        /* margin: -10%; */
+        /* display: flex; */
+        transform: rotateZ(60deg);
+        border: 3px solid #523468;
     }
     .display {
         display: none !important;
     }
     .volta {
-        top: 130px;
-        transform: translateX(17%);
+        transform: translateX(0);
         transition-timing-function: cubic-bezier(.68, -0.55, .27, 1.55);
-        ;
         transition-duration: 1s;
-        /* width: 75%; */
-        /* margin: auto; */
         background: #523468;
-        /* padding: 20px; */
     }
     .nav_links_response a:hover {
         margin: 1%;
@@ -426,15 +475,19 @@ footer .footer p {
         background: #422a53;
         border-radius: 4px;
     }
+    main,
+    footer {
+        display: flex;
+    }
     section .prod {
         width: calc(50.333% - 5px);
         padding: 0;
     }
     footer .footer {
         display: flex;
-        text-align: center;
+        /* text-align: center; */
         padding: 0;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     footer .footer_dados_1 {
         margin: 0;
@@ -442,7 +495,6 @@ footer .footer p {
     }
     footer .footer_midia {
         padding: 5%;
-        padding: 0;
     }
     footer .footer_midia a {
         margin: auto;
@@ -456,6 +508,32 @@ footer .footer p {
     }
     footer .footer_email {
         margin: auto;
+        margin-top: 5%;
+        margin-bottom: 5%;
         width: 90%;
+    }
+    footer .footer_email input {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    nav .nav::after {
+        font-size: 10pt;
+    }
+    footer .footer_email input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    footer .footer_email input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    footer .footer_email input {
+        width: 100%;
     }
 }
