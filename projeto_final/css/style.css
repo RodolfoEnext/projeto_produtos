@@ -63,11 +63,12 @@ header .logo4 img {
 }
 
 #Capa_1 {
-    width: 20px;
+    width: 15px;
     position: absolute;
     margin-left: 30px;
     justify-content: center;
-    margin-top: 8px;
+    margin-top: 10px;
+    fill: #c03f1f;
 }
 
 header input[type="search"] {
@@ -130,6 +131,10 @@ section .produtos {
 
 section .produtos h3 {
     font-size: 20pt;
+}
+
+section .produtos h4 {
+    font-size: 13pt;
 }
 
 section .prod {
@@ -363,6 +368,10 @@ footer .footer_copyright {
 }
 
 @media screen and (max-width: 1024px) {
+    section .produtos h4 {
+        font-size: 12pt;
+        font-weight: bold;
+    }
     nav .nav_links a {
         margin-right: 0px;
         padding: 8px;
@@ -476,6 +485,10 @@ footer .footer_copyright {
     header .nav_button_close span:last-child {
         transform: rotateZ(60deg);
         border: 3px solid #523468;
+    }
+    section .produtos h4 {
+        font-size: 12pt;
+        font-weight: normal;
     }
     .display {
         display: none !important;
@@ -655,8 +668,11 @@ footer .footer_copyright {
 }
 
 @media screen and (max-width: 768px) {
+    section .produtos h4 {
+        font-size: 12pt;
+        font-weight: normal;
+    }
     .modal_content {
         width: 60%;
-        /* display: flex; */
     }
 }
