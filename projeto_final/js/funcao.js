@@ -11,7 +11,6 @@ var search = document.querySelector('.search');
 var main = document.querySelector('main');
 var footer = document.querySelector('footer');
 var nav = document.querySelector('.nav');
-// var produtos = 0;
 var cont = 0;
 
 nav_button_open.addEventListener('click', function(event) {
@@ -22,7 +21,7 @@ nav_button_close.addEventListener('click', function(event) {
     fecharMenuMobile();
 })
 
-
+/*  ABRIR MENU MOBILE  */
 abrirMenuMobile = () => {
     nav_response.classList.add('volta');
     nav_button_open.classList.add('display');
@@ -35,6 +34,7 @@ abrirMenuMobile = () => {
     nav.style.display = 'none';
 }
 
+/*  FECHAR MENU MOBILE  */
 fecharMenuMobile = () => {
     nav_response.classList.remove('volta');
     nav_button_open.classList.remove('display');
@@ -96,7 +96,6 @@ lerApi = (cont) => {
             efeitos.innerHTML = `${produtos.potions[cont].effect}`;
             price.innerHTML = `$${produtos.potions[cont].price}`;
             image.src = `../projeto_final/images/products/${produtos.potions[cont].image}`;
-
 
             for (let j = 0; j < produtos.potions[cont].ingredients.length; j++) {
                 var ul = document.getElementById('modal_ingredients');
