@@ -19,10 +19,6 @@ input {
     opacity: 0;
 }
 
-.display {
-    display: none;
-}
-
 
 /*  HEADER   */
 
@@ -286,7 +282,7 @@ footer .footer p {
 
 .nav_response {
     position: absolute;
-    transform: translateX(-800px);
+    transform: translateX(-100%);
     /* left: -850px; */
     width: 75%;
     margin: auto;
@@ -366,34 +362,43 @@ footer .footer p {
         display: block;
     }
     header .nav_button_open {
+        border: none !important;
         display: block;
         position: absolute;
         width: 5%;
         margin: auto;
-        /* transform: rotateZ(90deg); */
+        transform: rotateZ(90deg);
     }
-    /* header .nav_button_open span {
+    header .nav_button_open span {
         border: 3px solid #523468;
         margin: 1px;
-    } */
-    .nav_response {
-        /* display: none; */
-        top: 120px;
-        transform: translateX(-620px);
-        /* left: -850px; */
-        width: 75%;
+    }
+    header .nav_button_close {
+        /* border: 1px solid green; */
+        border: none !important;
+        display: block;
+        position: absolute;
+        width: 5%;
         margin: auto;
-        background: #523468;
-        padding: 20px;
-        /* display: block; */
+        transform: rotateZ(90deg);
+    }
+    header .nav_button_close span {
+        border: 3px solid green;
+        margin: 1px;
+    }
+    .display {
+        display: none !important;
     }
     .volta {
-        top: 120px;
-        transform: translateX(90px);
-        width: 75%;
-        margin: auto;
+        top: 130px;
+        transform: translateX(17%);
+        transition-timing-function: cubic-bezier(.68, -0.55, .27, 1.55);
+        ;
+        transition-duration: 1s;
+        /* width: 75%; */
+        /* margin: auto; */
         background: #523468;
-        padding: 20px;
+        /* padding: 20px; */
     }
     .nav_links_response a:hover {
         margin: 1%;
@@ -421,15 +426,6 @@ footer .footer p {
         background: #422a53;
         border-radius: 4px;
     }
-    header .nav_button_close {
-        font-size: 35pt;
-        transform: rotateZ(90deg);
-    }
-    header .nav_button_close span {
-        font-family: sans-serif;
-        color: green;
-        margin: 1px;
-    }
     section .prod {
         width: calc(50.333% - 5px);
         padding: 0;
@@ -450,6 +446,9 @@ footer .footer p {
     }
     footer .footer_midia a {
         margin: auto;
+    }
+    footer .footer_midia img {
+        padding: 0;
     }
     footer .footer_dados_2 {
         display: flex;

@@ -2,7 +2,7 @@ var modal_aging = document.getElementById("modal_aging");
 var info_modal = document.querySelector('.info_modal');
 var prod = document.getElementsByClassName("prod");
 var ingredientes = document.getElementById("modal_ingredients");
-var nav_response = document.querySelector(".nav_response");
+var nav_response = document.querySelector('.nav_response');
 var nav_button_config = document.getElementsByClassName("nav_button_config")
 var nav_button_close = document.querySelector(".nav_button_close");
 var nav_button_open = document.querySelector(".nav_button_open");
@@ -10,15 +10,39 @@ var cont = 0;
 
 console.log(nav_button_config.length);
 
-function clickNav() {
-    for (let i = 0; i < nav_button_config.length; i++) {
-        nav_button_config[i].addEventListener('click', function() {
-            nav_button_config[i].classList.add('volta');
-            nav_button_config[i].classList.remove('volta');
+nav_button_open.addEventListener('click', function(event) {
+    abrirMenuMobile();
+})
 
-        });
-    }
+nav_button_close.addEventListener('click', function(event) {
+    fecharMenuMobile();
+})
+
+abrirMenuMobile = () => {
+    nav_response.classList.add('volta');
+    nav_button_open.classList.add('display');
+    nav_button_close.classList.remove('display');
+    console.log(nav_button_open);
+    console.log(nav_response);
+
 }
+
+fecharMenuMobile = () => {
+    // nav_button_open.classList.add('display');
+    nav_response.classList.remove('volta');
+    nav_button_open.classList.remove('display');
+    nav_button_close.classList.add('display');
+    console.log(nav_button_close);
+}
+
+// fecharMenuMobile = () => {
+//     nav_button_open.classList.add('display');
+//     nav_response.classList.remove('volta');
+
+
+//     console.log(nav_button_close);
+// }
+
 
 /*    FOR SOBRE CLASS DOS PRODUTOS     */
 for (let i = 0; i < prod.length; i++) {
