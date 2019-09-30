@@ -26,12 +26,12 @@ abrirMenuMobile = () => {
     nav_response.classList.add('volta');
     nav_button_open.classList.add('display');
     nav_button_close.classList.remove('display');
-    logo.style.display = 'none';
-    header_logos.style.display = 'none';
-    search.style.display = 'flex';
-    main.style.display = 'none';
-    footer.style.display = 'none';
-    nav.style.display = 'none';
+    logo.classList.add('desativar');
+    header_logos.classList.add('desativar');
+    nav.classList.add('desativar');
+    search.classList.add('ativar');
+    main.classList.add('desativar');
+    footer.classList.add('desativar');
 }
 
 /*  FECHAR MENU MOBILE  */
@@ -39,12 +39,12 @@ fecharMenuMobile = () => {
     nav_response.classList.remove('volta');
     nav_button_open.classList.remove('display');
     nav_button_close.classList.add('display');
-    logo.style.display = '';
-    header_logos.style.display = 'flex';
-    search.style.display = 'none';
-    main.style.display = 'flex';
-    footer.style.display = 'flex';
-    nav.style.display = 'flex';
+    logo.classList.remove('desativar');
+    header_logos.classList.remove('desativar');
+    nav.classList.remove('desativar');
+    search.classList.remove('ativar');
+    main.classList.remove('desativar');
+    footer.classList.remove('desativar');
 
 }
 

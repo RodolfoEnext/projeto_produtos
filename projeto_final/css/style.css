@@ -490,6 +490,12 @@ footer .footer_copyright {
         transform: rotateZ(60deg);
         border: 2px solid #523468;
     }
+    .desativar {
+        display: none !important;
+    }
+    .ativar {
+        display: flex !important;
+    }
     section .produtos h4 {
         font-size: 12pt;
         font-weight: normal;
