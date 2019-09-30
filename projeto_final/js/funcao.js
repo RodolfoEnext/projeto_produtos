@@ -23,6 +23,7 @@ nav_button_close.addEventListener('click', function(event) {
 
 /*  ABRIR MENU MOBILE  */
 abrirMenuMobile = () => {
+    nav_response.classList.remove('voltaPersonalizado');
     nav_response.classList.add('volta');
     nav_button_open.classList.add('display');
     nav_button_close.classList.remove('display');
@@ -36,7 +37,7 @@ abrirMenuMobile = () => {
 
 /*  FECHAR MENU MOBILE  */
 fecharMenuMobile = () => {
-    nav_response.classList.remove('volta');
+    nav_response.classList.add('voltaPersonalizado');
     nav_button_open.classList.remove('display');
     nav_button_close.classList.add('display');
     logo.classList.remove('desativar');

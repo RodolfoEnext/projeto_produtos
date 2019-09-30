@@ -504,6 +504,13 @@ footer .footer_copyright {
         transition-duration: 1s;
         background: #523468;
     }
+    .voltaPersonalizado {
+        transform: translateX(-120%);
+        transition-timing-function: cubic-bezier(.68, -0.55, .27, 1.55);
+        transition-duration: .5s;
+        background: #523468;
+        z-index: 1;
+    }
     .nav_links_response a:hover {
         margin: 1%;
         background: #422a53;
