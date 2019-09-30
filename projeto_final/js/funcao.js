@@ -59,24 +59,20 @@ for (let i = 0; i < prod.length; i++) {
 
 /*    ABRIR POPUP     */
 mostrar = (cont) => {
-    modal_aging.classList.add('abrir');
-}
-
-/*    FECHAR POPUP     */
+        modal_aging.classList.add('abrir');
+    }
+    /*    FECHAR POPUP     */
 fechar = (cont) => {
     modal_aging.classList.remove('abrir');
     ingredientes.innerHTML = '';
 }
-
 window.onclick = function(cont) {
-    if (event.target === modal_aging) {
-        modal_aging.classList.remove('abrir');
-        ingredientes.innerHTML = '';
+        if (event.target === modal_aging) {
+            modal_aging.classList.remove('abrir');
+            ingredientes.innerHTML = '';
+        }
     }
-}
-
-
-/*      REQUISIÇÃO HTTP       */
+    /*      REQUISIÇÃO HTTP       */
 lerApi = (cont) => {
     var xhttp = new XMLHttpRequest();
     var destino = "https://cdn.rawgit.com/LucasRuy/1d4a5d45e2ea204d712d0b324af28bab/raw/342e0e9277be486102543c7f50ef5fcf193234b6/potions.json";
