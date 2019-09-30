@@ -7,19 +7,14 @@
 
 body {
     margin: auto;
+}
+
+.container {
+    margin: auto;
     width: 75%;
     justify-items: center;
     justify-content: center;
     align-items: center;
-}
-
-.content {
-    opacity: 1;
-    margin: auto;
-}
-
-.oculto {
-    opacity: 0;
 }
 
 
@@ -47,7 +42,7 @@ header .logo4 {
 }
 
 header .logo4 img {
-    width: 75%;
+    width: 100%;
 }
 
 #Capa_1 {
